@@ -1,0 +1,42 @@
+<%= form_for(product_type) do |f| %>
+  <% if product_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product_type.errors.count, "error") %> prohibited this product_type from being saved:</h2>
+
+      <ul>
+      <% product_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type_name %>
+    <%= f.text_field :type_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <p> Your currentproduct image
+      <br>
+    <%= image_tag(product_type.image_url, size: "150") if product_type.image? %>
+    </p>
+    <br>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :in_stock %>
+    <%= f.check_box :in_stock %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
