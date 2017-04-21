@@ -12,16 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.select :name, ProductType.all.collect { |p| [ p.type_name ] }, include_blank: true   %>
-  </div>
-
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.text_field :price %>
-  </div>
-
-  <div class="field">
     <p> Your current product image
       <br>
     <%= image_tag(product.image_url, size: "150") if product.image? %>
@@ -34,11 +24,6 @@
   <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :in_stock %>
-    <%= f.select :in_stock, ProductType.all.collect { |p| [ p.in_stock ] }, include_blank: true   %>
   </div>
 
   <div class="actions">
