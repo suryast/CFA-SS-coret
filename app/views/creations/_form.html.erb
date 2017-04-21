@@ -16,8 +16,13 @@
   </div>
 
   <div class="field">
+    <p> Your current avatar
+      <br>
+    <%= image_tag(creation.artwork_image_url, size: "150") if creation.artwork_image? %>
+    </p>
+    <br>
     <%= f.label :artwork_image %>
-    <%= f.text_field :artwork_image %>
+    <%= f.file_field :artwork_image %>
   </div>
 
   <div class="field">
