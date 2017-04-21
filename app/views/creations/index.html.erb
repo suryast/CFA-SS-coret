@@ -17,11 +17,11 @@
   <tbody>
     <% @creations.each do |creation| %>
       <tr>
-        <td><%= creation.artist %></td>
+        <td><%= creation.artist_name %></td>
         <td><%= creation.artwork_image %></td>
         <td><%= creation.name %></td>
         <td><%= creation.description %></td>
-        <td><%= creation.type %></td>
+        <td><%= creation.creation_type %></td>
         <td><%= link_to 'Show', creation %></td>
         <td><%= link_to 'Edit', edit_creation_path(creation) %></td>
         <td><%= link_to 'Destroy', creation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

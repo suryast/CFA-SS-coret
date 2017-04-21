@@ -26,14 +26,13 @@ ActiveRecord::Schema.define(version: 20170420054913) do
   end
 
   create_table "creations", force: :cascade do |t|
-    t.integer  "artist_id"
+    t.string   "artist_name"
     t.string   "artwork_image"
     t.string   "name"
     t.text     "description"
-    t.string   "type"
+    t.string   "creation_type"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["artist_id"], name: "index_creations_on_artist_id", using: :btree
   end
 
   create_table "roles", force: :cascade do |t|
@@ -73,5 +72,4 @@ ActiveRecord::Schema.define(version: 20170420054913) do
   end
 
   add_foreign_key "artists", "users"
-  add_foreign_key "creations", "artists"
 end

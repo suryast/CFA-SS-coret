@@ -10,10 +10,9 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :artist_id %>
-    <%= f.text_field :artist_id %>
+    <%= f.label :artist %><br>
+    <%= f.select :artist_name, Artist.all.collect { |p| [ p.name ] }, include_blank: true %>
   </div>
 
   <div class="field">
@@ -33,7 +32,7 @@
 
   <div class="field">
     <%= f.label :type %>
-    <%= f.text_field :type %>
+    <%= f.text_field :creation_type %>
   </div>
 
   <div class="actions">

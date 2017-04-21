@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :artists
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -15,7 +16,7 @@ class User < ApplicationRecord
     elsif user.has_role? :seller
       self.add_role :seller, Artist
     else
-      
+
     end
   end
 
