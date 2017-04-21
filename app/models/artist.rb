@@ -1,10 +1,11 @@
 class Artist < ApplicationRecord
   belongs_to :user
   has_many :creations
+  after_initialize :default_values
+
+  mount_uploader :avatar, AvatarUploader
 
   resourcify
-
-  after_initialize :default_values
 
   private
     def default_values

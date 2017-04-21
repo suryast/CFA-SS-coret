@@ -24,8 +24,10 @@ gem 'faker'
 gem 'mailboxer'
 # Authorisation enforcement
 gem 'cancancan', '~> 1.10'
-# Roles library 
+# Roles library
 gem "rolify"
+
+gem 'mini_magick'
 
 
 #################################
