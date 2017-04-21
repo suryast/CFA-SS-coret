@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Creations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Artwork image</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @creations.each do |creation| %>
+      <tr>
+        <td><%= creation.artist_name %></td>
+        <td><%= creation.artwork_image %></td>
+        <td><%= creation.name %></td>
+        <td><%= creation.description %></td>
+        <td><%= creation.creation_type %></td>
+        <td><%= link_to 'Show', creation %></td>
+        <td><%= link_to 'Edit', edit_creation_path(creation) %></td>
+        <td><%= link_to 'Destroy', creation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Creation', new_creation_path %>

@@ -22,6 +22,11 @@ gem 'stripe'
 gem 'faker'
 # For internal messaging
 gem 'mailboxer'
+# Authorisation enforcement
+gem 'cancancan', '~> 1.10'
+# Roles library 
+gem "rolify"
+
 
 #################################
 

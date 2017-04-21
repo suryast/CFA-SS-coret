@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @creation.artist_name %>
+</p>
+
+<p>
+  <strong>Artwork image:</strong>
+  <%= @creation.artwork_image %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @creation.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @creation.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @creation.creation_type %>
+</p>
+
+<%= link_to 'Edit', edit_creation_path(@creation) %> |
+<%= link_to 'Back', creations_path %>
