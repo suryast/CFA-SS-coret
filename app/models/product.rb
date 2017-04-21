@@ -6,6 +6,6 @@ class Product < ApplicationRecord
   after_create :assign_name
 
   def assign_name
-    update_attributes(name: "#{creation.name} #{product_type.name}")
+    update_attributes(name: "#{creation.name}_#{product_type.name}")
   end
 end
