@@ -10,9 +10,12 @@
       </ul>
     </div>
   <% end %>
+
   <div class="field">
     <%= f.label :artist %><br>
-    <%= f.select :artist_name, Artist.all.collect { |p| [ p.name ] }, include_blank: true %>
+    <%= f.select :artist_name, Artist.all.collect { |p| [ p.name  ] }, include_blank: true %>
+    please also select corresponding Artist ID
+    <%= f.select :artist_id, Artist.all.collect { |p| [ p.id  ] }, include_blank: true %>
   </div>
 
   <div class="field">
