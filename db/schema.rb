@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421070054) do
+ActiveRecord::Schema.define(version: 20170422152137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20170421070054) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "avatar"
+    t.integer  "creation_id"
+    t.index ["creation_id"], name: "index_artists_on_creation_id", using: :btree
     t.index ["user_id"], name: "index_artists_on_user_id", using: :btree
   end
 
@@ -33,6 +35,12 @@ ActiveRecord::Schema.define(version: 20170421070054) do
     t.string   "creation_type"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.integer  "artist_id"
+    t.integer  "product_id"
+    t.index ["artist_id"], name: "index_creations_on_artist_id", using: :btree
+    t.index ["product_id"], name: "index_creations_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_creations_on_user_id", using: :btree
   end
 
   create_table "product_types", force: :cascade do |t|
@@ -42,6 +50,8 @@ ActiveRecord::Schema.define(version: 20170421070054) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+    t.integer  "product_id"
+    t.index ["product_id"], name: "index_product_types_on_product_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -54,8 +64,10 @@ ActiveRecord::Schema.define(version: 20170421070054) do
     t.string   "image"
     t.integer  "creation_id"
     t.integer  "product_type_id"
+    t.integer  "user_id"
     t.index ["creation_id"], name: "index_products_on_creation_id", using: :btree
     t.index ["product_type_id"], name: "index_products_on_product_type_id", using: :btree
+    t.index ["user_id"], name: "index_products_on_user_id", using: :btree
   end
 
   create_table "roles", force: :cascade do |t|
@@ -95,7 +107,13 @@ ActiveRecord::Schema.define(version: 20170421070054) do
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
   end
 
+  add_foreign_key "artists", "creations"
   add_foreign_key "artists", "users"
+  add_foreign_key "creations", "artists"
+  add_foreign_key "creations", "products"
+  add_foreign_key "creations", "users"
+  add_foreign_key "product_types", "products"
   add_foreign_key "products", "creations"
   add_foreign_key "products", "product_types"
+  add_foreign_key "products", "users"
 end

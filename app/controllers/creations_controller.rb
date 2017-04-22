@@ -15,18 +15,19 @@ class CreationsController < ApplicationController
   # GET /creations/new
   def new
     @creation = Creation.new
-    @artists = Artist.all
+
   end
 
   # GET /creations/1/edit
   def edit
-    @artists = Artist.all
   end
 
   # POST /creations
   # POST /creations.json
   def create
     @creation = Creation.new(creation_params)
+    @creation.user_id = current_user.id
+
 
     respond_to do |format|
       if @creation.save
@@ -71,6 +72,6 @@ class CreationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def creation_params
-      params.require(:creation).permit(:artist_name, :artwork_image, :name, :description, :creation_type)
+      params.require(:creation).permit(:artist_name, :artwork_image, :name, :description, :creation_type, :user_id, :artist_id)
     end
 end
