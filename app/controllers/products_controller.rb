@@ -25,9 +25,12 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @creation = Creation.new(params(:))
     @product.user_id = current_user.id
-    self.update_attributes(name: "#{creation.name}#{product_type.type_name}")
+
+    @creation = Creation.find(36)
+    @product.creation_id = @creation.id
+    @product_type = ProductType.find(2)
+    @product.product_type_id = @product_type.id
 
     respond_to do |format|
       if @product.save

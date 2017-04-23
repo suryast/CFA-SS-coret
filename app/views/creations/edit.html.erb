@@ -2,5 +2,5 @@
 
 <%= render 'form', creation: @creation %>
 
-<%= link_to 'Show', @creation %> |
-<%= link_to 'Back', creations_path %>
+<td><%= link_to 'Show', artist_creation_path(@creation.artist, @creation) %></td>
+<%= link_to 'Back', artist_creations_path %>

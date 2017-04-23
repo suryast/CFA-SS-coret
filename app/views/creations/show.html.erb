@@ -25,5 +25,5 @@
   <%= @creation.creation_type %>
 </p>
 
-<%= link_to 'Edit', edit_creation_path(@creation) %> |
-<%= link_to 'Back', creations_path %>
+<%= link_to 'Edit', edit_artist_creation_path(@creation.artist, @creation) %> |
+<%= link_to 'Back', artist_creations_path %>

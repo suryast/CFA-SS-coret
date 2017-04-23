@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :artists
   has_many :creations, through: :artists
   has_many :products
+  
   after_initialize :default_values
   after_create :assign_default_role
 
