@@ -19,7 +19,7 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.price %></td>
-        <td><%= image_tag product.image, size: "50" %></td>
+        <td><%= image_tag product.image_url(:thumb), size: "50" %></td>
         <td><%= product.description %></td>
         <td><%= product.in_stock %></td>
         <td><%= link_to 'Show', product %></td>
