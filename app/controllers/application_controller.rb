@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, :except => [:home, :about, :contact, :history]
-
-  protect_from_forgery with: :exception
+  before_action :authenticate_user!, :except => [:root, :about, :contact, :history]
 
   include CanCan::ControllerAdditions
+
+  protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 

@@ -5,4 +5,6 @@ class Creation < ApplicationRecord
 
   validates :artist, :presence => true
 
+  resourcify
+
 end

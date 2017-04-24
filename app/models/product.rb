@@ -1,12 +1,13 @@
 class Product < ApplicationRecord
+  resourcify
+
   mount_uploader :image, AvatarUploader
 
   has_many :order_items
-  
+
   belongs_to :creation
   belongs_to :product_type
-  belongs_to :productable
-
+  
   after_create :assign_name
   after_create :assign_price
   after_create :assign_instock

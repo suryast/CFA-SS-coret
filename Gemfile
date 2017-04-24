@@ -25,10 +25,19 @@ gem 'mailboxer'
 # Authorisation enforcement
 gem 'cancancan', '~> 1.10'
 # Roles library
-gem "rolify"
-
+gem 'rolify'
+# Photo resizing
 gem 'mini_magick'
-
+# For specifying user policy
+gem 'pundit'
+# Mailer
+gem 'mailgun-ruby', '~>1.1.4'
+# Search function
+gem 'ransack'
+# Cloud-based folder for pictures
+gem 'cloudinary'
+# Form for mailgun
+gem 'simple_form'
 
 #################################
 

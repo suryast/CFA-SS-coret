@@ -1,4 +1,5 @@
 class OrderItem < ApplicationRecord
+  resourcify
   belongs_to :product
   belongs_to :order
 
