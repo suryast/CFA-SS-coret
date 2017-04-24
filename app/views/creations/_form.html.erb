@@ -1,4 +1,5 @@
-<%= form_for(creation) do |f| %>
+
+<%= form_for [@artist, @creation] do |f| %>
   <% if creation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(creation.errors.count, "error") %> prohibited this creation from being saved:</h2>
@@ -12,14 +13,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :artist %><br>
-    <%= f.select :artist_name, Artist.all.collect { |p| [ p.name  ] }, include_blank: true %>
-    please also select corresponding Artist ID
-    <%= f.select :artist_id, Artist.all.collect { |p| [ p.id  ] }, include_blank: true %>
-  </div>
-
-  <div class="field">
-    <p> Your current avatar
+    <p> Your current artwork image
       <br>
     <%= image_tag(creation.artwork_image_url, size: "150") if creation.artwork_image? %>
     </p>

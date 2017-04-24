@@ -22,9 +22,11 @@
         <td><%= creation.name %></td>
         <td><%= creation.description %></td>
         <td><%= creation.creation_type %></td>
-        <td><%= link_to 'Show', creation %></td>
-        <td><%= link_to 'Edit', edit_creation_path(creation) %></td>
-        <td><%= link_to 'Destroy', creation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', artist_creation_path(creation.artist, creation) %> </td>
+        <td><%= link_to 'Edit', edit_artist_creation_path(creation.artist, creation) %> </td>
+        <td><%= link_to 'Back', artist_creations_path %> </td>
+</ul>
+
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Creation', new_creation_path %>
+<%= link_to 'New Creation', new_artist_creation_path %>

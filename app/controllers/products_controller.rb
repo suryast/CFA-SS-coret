@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @order_item = current_order.order_items.new
   end
 
   # GET /products/1
@@ -25,9 +26,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @creation = Creation.new(params(:))
     @product.user_id = current_user.id
-    self.update_attributes(name: "#{creation.name}#{product_type.type_name}")
 
     respond_to do |format|
       if @product.save
@@ -72,6 +71,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :price, :description, :in_stock, :image, :user_id)
+      params.require(:product).permit(:name, :price, :description, :in_stock, :image, :user_id, :creation_id, :product_type_id)
     end
 end

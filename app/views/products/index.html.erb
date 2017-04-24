@@ -30,6 +30,14 @@
   </tbody>
 </table>
 
+
+<h3>Products for Sale</h3>
+
+    <% @products.each do |product| %>
+      <%= render "product_row", product: product, order_item: @order_item %>
+    <% end %>
+
+
 <br>
 
 <%= link_to 'New Product', new_product_path %>

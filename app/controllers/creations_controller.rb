@@ -15,26 +15,29 @@ class CreationsController < ApplicationController
   # GET /creations/new
   def new
     @creation = Creation.new
-
+    @artist = Artist.find(params[:artist_id])
   end
 
   # GET /creations/1/edit
   def edit
+    @artist = Artist.find(params[:artist_id])
   end
 
   # POST /creations
   # POST /creations.json
   def create
-    @creation = Creation.new(creation_params)
+    @artist = Artist.find(params[:artist_id])
+    @creation = @artist.creations.new(creation_params)
     @creation.user_id = current_user.id
-
+    @creation.artist_id = @artist.id
+    @creation.artist_name = @artist.name
 
     respond_to do |format|
       if @creation.save
-        format.html { redirect_to @creation, notice: 'Creation was successfully created.' }
-        format.json { render :show, status: :created, location: @creation }
+        format.html { redirect_to artist_creations_path(@artist, @creation), notice: 'Creation was successfully created.' }
+        format.json { render :show, status: :ok, location: @creation }
       else
-        format.html { render :new }
+        format.html { render :edit }
         format.json { render json: @creation.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +48,7 @@ class CreationsController < ApplicationController
   def update
     respond_to do |format|
       if @creation.update(creation_params)
-        format.html { redirect_to @creation, notice: 'Creation was successfully updated.' }
+        format.html { redirect_to artist_creations_path(@artist), notice: 'Creation was successfully updated.' }
         format.json { render :show, status: :ok, location: @creation }
       else
         format.html { render :edit }
@@ -59,7 +62,7 @@ class CreationsController < ApplicationController
   def destroy
     @creation.destroy
     respond_to do |format|
-      format.html { redirect_to creations_url, notice: 'Creation was successfully destroyed.' }
+      format.html { redirect_to artist_creations_path(@artist), notice: 'Creation was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -14,15 +14,13 @@
 
   <div class="field">
     <%= f.label :creation %><br>
-    <%= f.select :creation_id, Creation.all.collect { |p|  p.name }, include_blank: true %>
-    please also select corresponding Artist ID
+    please also select corresponding Creation Name
     <%= f.select :creation_id, Creation.all.collect { |p| [ p.id  ] }, include_blank: true %>
   </div>
 
   <div class="field">
     <%= f.label :product_type %><br>
-    <%= f.select :product_type_id, ProductType.all.collect { |p| [ p.type_name ] }, include_blank: true %>
-    please also select corresponding Artist ID
+    please also select corresponding Product Type
     <%= f.select :product_type_id, ProductType.all.collect { |p| [ p.id  ] }, include_blank: true %>
   </div>
 
