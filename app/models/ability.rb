@@ -22,11 +22,13 @@ class Ability
           can :read, Order
           can :update, OrderItem
           can :update, Order
-       else
+       elsif user.has_role? :customer
           can :manage, Address
           can :manage, OrderItem
           can :manage, Order
           can :read, Product
+       else
+          
        end
     #
     # The first argument to `can` is the action you are giving the user
