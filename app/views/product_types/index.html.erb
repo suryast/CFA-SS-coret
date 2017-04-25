@@ -18,7 +18,7 @@
       <tr>
         <td><%= product_type.type_name %></td>
         <td><%= product_type.price %></td>
-        <td><%= image_tag product_type.image, size: "50" %></td>
+        <td><%= image_tag product_type.image_url, size: "50" %></td>
         <td><%= product_type.in_stock %></td>
         <td><%= link_to 'Show', product_type %></td>
         <td><%= link_to 'Edit', edit_product_type_path(product_type) %></td>

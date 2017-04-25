@@ -20,7 +20,7 @@
         <td><%= artist.user_id %></td>
         <td><%= artist.name %></td>
         <td><%= artist.id%></td>
-        <td><%= image_tag artist.avatar, size: "80" %></td>
+        <td><%= image_tag artist.avatar_url(:thumb), size: "50" %></td>
         <td><%= artist.earning_to_date %></td>
         <td><%= link_to 'Show', artist %></td>
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>

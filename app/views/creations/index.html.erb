@@ -18,7 +18,7 @@
     <% @creations.each do |creation| %>
       <tr>
         <td><%= creation.artist_name %></td>
-        <td><%= image_tag creation.artwork_image, size: "50" %></td>
+        <td><%= image_tag creation.artwork_image_url, size: "50" %></td>
         <td><%= creation.name %></td>
         <td><%= creation.description %></td>
         <td><%= creation.creation_type %></td>
