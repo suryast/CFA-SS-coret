@@ -981,14 +981,14 @@ a.box:active {
 }
 
 .button.is-primary {
-  background-color: #00d1b2;
+  background-color: #C2185B;
   border-color: transparent;
   color: #fff;
 }
 
 .button.is-primary.is-hovered,
 .button.is-primary:hover {
-  background-color: #00c4a7;
+  background-color: #ec407a;
   border-color: transparent;
   color: #fff;
 }
@@ -2733,7 +2733,7 @@ input[type="submit"].button {
 }
 
 .title {
-  color: #363636;
+  color: white;
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.125;
@@ -3057,10 +3057,13 @@ input[type="submit"].button {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 0.75rem;
+  background-color: black;
+  font-size: 150%;
+  color: white;
 }
 
 .card-footer-item:not(:last-child) {
-  border-right: 1px solid #dbdbdb;
+  border-right: 0 solid #dbdbdb;
 }
 
 .card {
@@ -6391,7 +6394,7 @@ label.panel-block:hover {
 }
 
 .hero.is-primary {
-  background-color: #00d1b2;
+  background-color: black;
   color: #fff;
 }
 

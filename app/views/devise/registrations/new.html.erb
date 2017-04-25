@@ -1,49 +1,62 @@
-<h2>REGISTER TO CORET</h2>
+<div class="hero-body">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column is-4 is-offset-4">
+        <h1 class="title" style="color:black">
+          SIGN UP
+        </h1>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="box" style="background-color:whitesmoke">
+          <label class="label">First Name</label>
+          <p class="control">
+            <%= f.text_field :first_name, class:"input", placeholder:"John", autofocus: true %>
+          </p>
+          <label class="label">Last Name</label>
+          <p class="control">
+            <%= f.text_field :last_name, class:"input", placeholder:"Smith", autofocus: true %>
+          </p>
+          <label class="label">Last Name</label>
+          <p class="control">
+            <%= f.email_field :email , class:"input", placeholder:"john.smith@mail.com", autofocus: true %>
+          </p>
+          <hr>
+          <label class="label">Password</label>
+          <p class="control">
+            <% if @minimum_password_length %>
+            <em style="color:black">(<%= @minimum_password_length %>
+              characters minimum)</em>
+            <% end %><br/>
+            <%= f.password_field :password, class:"input", placeholder:"●●●●●●●", autofocus: true, autocomplete: "off" %>
+          </p>
+          <label class="label">Confirm Password</label>
+          <p class="control">
+            <% if @minimum_password_length %>
+            <em style="color:black">(<%= @minimum_password_length %>
+              characters minimum)</em>
+            <% end %><br/>
+            <%= f.password_field :password_confirmation, class:"input", placeholder:"●●●●●●●", autofocus: true, autocomplete: "off" %>
+          </p>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+          <p class="control">
+            <label class="label">Your current Avatar</label>
+            <%= image_tag(resource.avatar_url, size: "150") if resource.avatar? %>
+          </p>
+          <br>
+          <label class="label">Avatar</label>
+          <p class="control">
+            <%= f.file_field :avatar %>
+          </p>
+        </div>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+        <p class="control" >
+          <%= f.submit "SIGN UP", class: "button is-primary" %>
+          |
+          <%= link_to('Login', new_user_session_path, style: "color:black", :method => :get)%>
+        </p>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name%>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <p> Your current avatar
-      <br>
-    <%= image_tag(resource.avatar_url, size: "150") if resource.avatar? %>
-    </p>
-    <br>
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+</div>
