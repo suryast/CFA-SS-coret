@@ -35,8 +35,6 @@
 
           <% if user_signed_in? %>
           <%= render "product_row", product: product, order_item: @order_item%>
-          <% else %>
-          <%= link_to('Log to Shop', new_user_session_path, class: "button is-primary")  %>
           <% end %>
         </footer>
 
@@ -81,8 +79,6 @@
 
           <% if user_signed_in? %>
           <%= render "product_row", product: product, order_item: @order_item%>
-          <% else %>
-          <%= link_to('Log to Shop', new_user_session_path, class: "button is-primary")  %>
           <% end %>
         </footer>
 
@@ -126,8 +122,6 @@
 
           <% if user_signed_in? %>
           <%= render "product_row", product: product, order_item: @order_item%>
-          <% else %>
-          <%= link_to('Login', new_user_session_path, class: "button is-primary")  %>
           <% end %>
 
         </footer>
