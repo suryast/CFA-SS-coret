@@ -1,10 +1,13 @@
 <%= form_for order_item, remote: true do |f| %>
 
-<h4>Unit Price:
-<span style="color: green"><%= number_to_currency product.price %></span>
-<%= f.number_field :quantity, value: 1, class: "control", min: 1 %>
-<%= f.submit "Add to Cart", class: "button is-primary" %>
-</h4>
+<p class="card-footer-item" style:"background-color:black">
+  <!-- <span style="color: green"><%= number_to_currency product.price %> -->
+  <%= f.number_field :quantity, value: 1, class: "input", min: 1, style:"width: 3em" %>
+  |
+  <%= f.submit "Add to Cart", class: "button is-warning" %>
 
-<%= f.hidden_field :product_id, value: product.id %>
+  <%= f.hidden_field :product_id, value: product.id %>
+</span>
+</p>
+
 <% end %>
