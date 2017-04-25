@@ -63,15 +63,15 @@ The programs have five prongs that are either ongoing or planned for the future:
 ## Wireframes
 I used sketch to the wireframes. You can find the UI prototypes here https://invis.io/WFBBYX9YM – best viewed in mobile.
 
-![Mobile Home](https://projects.invisionapp.com/static-signed/live-embed/10524350/229356883/6/latest/VE6kbBd7mSyoOlEglevvW6kIpKZ8KZUzMcpEUOuu1BryjOcfSUn3qb0vx8OtROtw7PoSSIuaI6Rddis2csmgCHQlE/Mobile-Portrait-Home-2x.png)
+![Mobile Home](http://res.cloudinary.com/suryast/image/upload/v1493126119/Mobile_Home_tt8f1v.jpg)
 
-![Mobile Register](https://projects.invisionapp.com/static-signed/live-embed/10524350/229369416/5/latest/4Az57weIgxVRZ9Lr6R4FgaWBibPMHnhdKBCgYEM0IGz7i8lE8QbvW5NPSuLm5kiwsWqqDKa0OMA0daAO5lEU5CqglE/Mobile-Portrait-Register-2x.png)
+![Mobile Register](http://res.cloudinary.com/suryast/image/upload/v1493126317/Mobile_Register_wuagnk.jpg)
 
-![Mobile Product Show](https://projects.invisionapp.com/static-signed/live-embed/10524350/229379432/3/latest/TRlE2hsyEUCSB7nS7YuxKsn0IMExF7a11WVK7AQbWQQh1PVLvStKslwzOLtzN5XZlEPa8L5hNx8crDpPChLlEX07QlE/Mobile-Portrait-Product-2x.png)
+![Mobile Product Show](http://res.cloudinary.com/suryast/image/upload/v1493126349/Mobile_Product_Show_fuxyi6.jpg)
 
-![Mobile Shopping Cart](https://projects.invisionapp.com/static-signed/live-embed/10524350/229489811/1/latest/8WcuG8MCvVsRV7lE3pVWD732UrYNAn01DEX0dszNxEnmSSWQYSfUCEgPktdV3fSCUm0G7joQAdVZlEShTA9GCA7AlE/Mobile-Portrait-Shopping-Cart-2x.png)
+![Mobile Shopping Cart](http://res.cloudinary.com/suryast/image/upload/v1493126119/Mobile_Cart_lw4cxf.jpg)
 
-![Mobile Home in Actual Color Theme](https://projects.invisionapp.com/static-signed/live-embed/10524350/229489811/1/latest/8WcuG8MCvVsRV7lE3pVWD732UrYNAn01DEX0dszNxEnmSSWQYSfUCEgPktdV3fSCUm0G7joQAdVZlEShTA9GCA7AlE/Mobile-Portrait-Shopping-Cart-2x.png)
+![Mobile Home in Actual Color Theme](http://res.cloudinary.com/suryast/image/upload/v1493126119/Mobile_Home_Color_nf2i93.jpg)
 
 ## User stories
 I used Trello to map user stories and project planning. The board can be found here https://trello.com/b/V2XdK0TN/marketplace-development
@@ -85,4 +85,5 @@ I estimated that the core, production ready, prototype would take 120 agile poin
 ![Burndown Chart](http://res.cloudinary.com/suryast/image/upload/v1493124477/Burdown_Chart_cyv4ge.png)
 
 ## Presentation deck
-![Pitch & Demo Deck](https://docs.google.com/presentation/d/1d8Y3FRSWehFrRn9w1O236z6YpWO0wj8tH3RiSSEsKOE/edit?usp=sharing)
+Here is my presentation deck for the demo day
+[Pitch & Demo Deck](https://docs.google.com/presentation/d/1d8Y3FRSWehFrRn9w1O236z6YpWO0wj8tH3RiSSEsKOE/edit?usp=sharing)
