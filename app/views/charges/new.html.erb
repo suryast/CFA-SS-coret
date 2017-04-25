@@ -10,9 +10,16 @@
     </label>
   </article>
 
+
+
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-email="<%= @email%>"
           data-description="<%= @description %>"
           data-amount="<%= @amount %>"
+          data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          data-currency="aud"
           data-locale="auto"></script>
 <% end %>
+
+<%= link_to "Continue shopping", root_path %>
