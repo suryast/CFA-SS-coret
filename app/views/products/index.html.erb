@@ -30,7 +30,7 @@
         <% if user_signed_in? %>
           <td><%= render "product_row", product: product, order_item: @order_item %></td>
         <% else %>
-          <td><%= render "product_row_disabled", product: product, order_item: @order_item %></td>
+          <td><%= link_to('Log to Shop', new_user_session_path, class: "button is-primary")  %></td>
         <% end %>
       </tr>
     <% end %>
