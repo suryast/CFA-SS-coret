@@ -1,18 +1,38 @@
-<footer class="footer">
-    <div class="columns">
-        <div class="column is-three-quarters">
-            <p>First column</p>
+<footer class="footer" style="background-color:#4A4A4A;">
+    <div class="columns" style="color:white;">
+        <div class="column is-1">
         </div>
-        <div class="column">
+        <div class="column is-4">
+            <br>
+            <%= link_to('HOME', root_path, style: "color:white", :method => :get) %>
+            <p>NEWSLETTERS</p>
+            <%= link_to('CONTACT US', contact_path, style: "color:white", :method => :get) %>
+            <br>
+        </div>
+        <div class="column is-3">
+        </div>
+        <div class="column is-3">
             <div class="container">
-                <p>Second Column</p>
+              Join Our Newsletters
+              <div class="field has-addons" style="padding-top:5px">
+                <p class="control">
+                  <input class="input" type="text" placeholder="Your email address">
+                </p>
+                <p class="control">
+                  <a class="button is-info">
+                    Sign Up
+                  </a>
+                </p>
+              </div>
             </div>
+        </div>
+        <div class="column is-1">
         </div>
     </div>
 
 </footer>
 
-    <div class="columns">
+    <div class="columns" style="background-color:#F3F3F3">
         <div class="column is-3">
             <p>©2017 Rumah Cerita</p>
         </div>

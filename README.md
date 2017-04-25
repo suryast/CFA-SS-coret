@@ -1,4 +1,7 @@
-# Marketplace Project:: Rumah Cerita
+# Marketplace Project:: # **Coret** by Rumah Cerita
+
+Heroku link: [http://coret.heroku.com/](http://coret.heroku.com/)
+Github link: [https://github.com/suryast/CFA-SS-coret](https://github.com/suryast/CFA-SS-coret)
 
 ## Rationale
 This is a project that I initiated as part of Coders' Factory Academy bootcamp. The main goal of this exercise is demonstrate my ability as an aspiring full-stack developer to demonstrate that I can can build a complete Rails application from design through to deployment, using appropriate tools and methodologies.
@@ -50,26 +53,36 @@ The programs have five prongs that are either ongoing or planned for the future:
 
       Inspiration: http://tohe.vn/en/.
 
-## Problems
+## Roadblocks
 - Need sustainable funding to keep run free face-to-face workshops for under-resourced students.
 - No system in place yet for approach #2, #3, #4 and #5.
 
-## Scope of the project
-- Implementing platform **Coret** by Rumah Cerita is best suited for this exercise, so I will go ahead with it.
-
-
-# **Coret** by Rumah Cerita
-
-## Problem definition
-
-## Solution
+## Solution and scope provided by this project
+- Implement platform **Coret** by Rumah Cerita.
 
 ## Wireframes
+I used sketch to the wireframes. You can find the UI prototypes here https://invis.io/WFBBYX9YM – best viewed in mobile.
+
+![Mobile Home](https://projects.invisionapp.com/static-signed/live-embed/10524350/229356883/6/latest/VE6kbBd7mSyoOlEglevvW6kIpKZ8KZUzMcpEUOuu1BryjOcfSUn3qb0vx8OtROtw7PoSSIuaI6Rddis2csmgCHQlE/Mobile-Portrait-Home-2x.png)
+
+![Mobile Register](https://projects.invisionapp.com/static-signed/live-embed/10524350/229369416/5/latest/4Az57weIgxVRZ9Lr6R4FgaWBibPMHnhdKBCgYEM0IGz7i8lE8QbvW5NPSuLm5kiwsWqqDKa0OMA0daAO5lEU5CqglE/Mobile-Portrait-Register-2x.png)
+
+![Mobile Product Show](https://projects.invisionapp.com/static-signed/live-embed/10524350/229379432/3/latest/TRlE2hsyEUCSB7nS7YuxKsn0IMExF7a11WVK7AQbWQQh1PVLvStKslwzOLtzN5XZlEPa8L5hNx8crDpPChLlEX07QlE/Mobile-Portrait-Product-2x.png)
+
+![Mobile Shopping Cart](https://projects.invisionapp.com/static-signed/live-embed/10524350/229489811/1/latest/8WcuG8MCvVsRV7lE3pVWD732UrYNAn01DEX0dszNxEnmSSWQYSfUCEgPktdV3fSCUm0G7joQAdVZlEShTA9GCA7AlE/Mobile-Portrait-Shopping-Cart-2x.png)
+
+![Mobile Home in Actual Color Theme](https://projects.invisionapp.com/static-signed/live-embed/10524350/229489811/1/latest/8WcuG8MCvVsRV7lE3pVWD732UrYNAn01DEX0dszNxEnmSSWQYSfUCEgPktdV3fSCUm0G7joQAdVZlEShTA9GCA7AlE/Mobile-Portrait-Shopping-Cart-2x.png)
 
 ## User stories
+I used Trello to map user stories and project planning. The board can be found here https://trello.com/b/V2XdK0TN/marketplace-development
 
 ## Entity Relationship Diagram
+![ERD](http://res.cloudinary.com/suryast/image/upload/v1493123433/Coret_by_Rumah_Cerita_3_3_ulx3ee.png)
 
 ## Project plan and estimation
+I estimated that the core, production ready, prototype would take 120 agile points to build including UX and UI deasign and it would definitely take more than 2 weeks I had been allocated :D – you can't learn unless you set your bar high. Additional features of the core build will take additional 50 points. Overall, I think this project would need approximately 170 agile points to a point where I would be satisfied.
+
+![Burndown Chart](http://res.cloudinary.com/suryast/image/upload/v1493124477/Burdown_Chart_cyv4ge.png)
 
 ## Presentation deck
+![Pitch & Demo Deck](https://docs.google.com/presentation/d/1d8Y3FRSWehFrRn9w1O236z6YpWO0wj8tH3RiSSEsKOE/edit?usp=sharing)
