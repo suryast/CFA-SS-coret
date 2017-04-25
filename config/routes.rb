@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'contact', to: "contact#index"
-  post 'contact', to: "contact#mail"
-
   resources :order_items
-  resource :cart, only: [:show]
   resources :orders
   resources :order_statuses
-  resources :addresses
-  resources :products #only: [:index]
-  resources :product_types
 
   resource :cart, only: [:show]
+
+  resources :charges
+
+  resources :addresses
+
+  resources :products #only: [:index]
+  resources :product_types
 
   resources :artists do
     resources :creations
@@ -22,10 +22,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'products#index'
 
+  get 'thanks', to: 'charges#thanks', as: 'thanks'
+
   get 'pages/home'
-
   get 'pages/history'
-
   get 'pages/about'
+
+  get 'contact', to: "contact#index"
+  post 'contact', to: "contact#mail"
 
 end
